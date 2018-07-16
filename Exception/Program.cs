@@ -15,6 +15,7 @@ namespace Prog
                 double result = Divide(13.4, 0);
                 Console.WriteLine(result);
             }
+            
             catch (ArgumentException e)
             {
                 //Console.WriteLine(e.StackTrace);
@@ -24,6 +25,10 @@ namespace Prog
             catch (InvalidOperationException ix)
             {
                 Console.WriteLine("Elkaptam");
+            }
+            catch/* (Exception ex)*/
+            {
+                Console.WriteLine("Minden kivételt elkapok");
             }
 
             Console.ReadKey();
