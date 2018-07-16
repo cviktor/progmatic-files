@@ -15,9 +15,13 @@ namespace Prog
             get { return _salary; }
             set
             {
-                if (value > 0) //TODO bejelzés
+                if (value >= 0) //TODO bejelzés
                 {
                     _salary = value;
+                }
+                else
+                {
+                    throw new InvalidSalaryException(value);
                 }
             }
         }
